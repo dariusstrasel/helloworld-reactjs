@@ -2,6 +2,8 @@ const path = require("path");
 const webpack = require("webpack");
 const bundlePath = path.resolve(__dirname, "dist/");
 
+const serverPort = 3000;
+
 module.exports = {
   entry: "./src/index.js",
   module: {
@@ -25,8 +27,8 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname,'public'),
-    port: 3000,
-    publicPath: "http://localhost:3000/dist"
+    port: serverPort,
+    publicPath: `http://localhost:${serverPort}/dist`
   },
   plugins: [ new webpack.HotModuleReplacementPlugin() ]
 };
