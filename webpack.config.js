@@ -1,7 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
-const bundlePath = path.resolve(__dirname, "dist/");
-
+const bundleFolder = "dist/";
+const bundlePath = path.resolve(__dirname, bundleFolder);
 const serverPort = 3000;
 
 module.exports = {
